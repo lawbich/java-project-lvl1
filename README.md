@@ -7,4 +7,5 @@
 
 [![Build Status](https://github.com/lawbich/java-project-lvl1/workflows/gradle-build-check/badge.svg)](https://github.com/lawbich/java-project-lvl1/actions)
 
+Even game:
 <a href="https://asciinema.org/a/anZfEuKw52XY3K4lyEuo9fCwu" target="_blank"><img src="https://asciinema.org/a/anZfEuKw52XY3K4lyEuo9fCwu.svg" /></a>
