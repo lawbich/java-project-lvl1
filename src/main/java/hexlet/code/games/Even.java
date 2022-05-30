@@ -1,9 +1,9 @@
-package hexlet.code;
+package hexlet.code.games;
 
 import java.util.Scanner;
 
-public class Games {
-    public static void even() {
+public class Even {
+    public static void game() {
         Scanner sc = new Scanner(System.in);
         System.out.println("May I have your name?");
         var name = sc.next();
@@ -24,8 +24,11 @@ public class Games {
             } else {
                 rightAnswer = "no";
             }
+
+            var question = number + "";
+
             Scanner scan = new Scanner(System.in);
-            System.out.println("Question: " + number);
+            System.out.println("Question: " + question);
             var answer = scan.next();
             if (!answer.equals(rightAnswer)) {
                 System.out.print("\'" + answer + "\'" + " is wrong answer ;(.");
