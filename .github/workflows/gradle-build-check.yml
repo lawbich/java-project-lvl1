@@ -1,10 +1,10 @@
-name: gradle-build-check
-
+name: build
 on: [push]
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Run build
+      - name: Clone repository code
+        uses: actions/checkout@v2
+      - name: Run app build
         run: make build
