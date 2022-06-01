@@ -1,7 +1,9 @@
 name: gradle-build-check
 
-on: push
+on: [push]
 
 jobs:
   build:
-    - run: make build
+    runs-on: ubuntu-latest
+    steps:
+       - run: make build
