@@ -13,4 +13,11 @@ public class Utils {
         var number = (int) Math.round(Math.random() * (rangeMax - rangeMin) + rangeMin);
         return number;
     }
+
+    public static int randomArrayLength() {
+        final int rangeMax = 10;
+        final int rangeMin = 5;
+        var number = (int) Math.round(Math.random() * (rangeMax - rangeMin) + rangeMin);
+        return number;
+    }
 }
