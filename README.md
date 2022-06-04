@@ -7,5 +7,4 @@
 
 [![Actions Status](https://github.com/lawbich/java-project-lvl1/workflows/build/badge.svg)](https://github.com/lawbich/java-project-lvl1/actions)
 
-Even game:
-<a href="https://asciinema.org/a/anZfEuKw52XY3K4lyEuo9fCwu" target="_blank"><img src="https://asciinema.org/a/anZfEuKw52XY3K4lyEuo9fCwu.svg" /></a>
+<script id="asciicast-MDHuftRxllSFbyLlF8S4TVmkX" src="https://asciinema.org/a/MDHuftRxllSFbyLlF8S4TVmkX.js" async></script>
