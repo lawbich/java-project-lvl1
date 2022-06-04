@@ -2,11 +2,13 @@ package hexlet.code;
 
 import hexlet.code.games.Even;
 import hexlet.code.games.Calculator;
+import hexlet.code.games.Gcd;
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter the game number and press Enter. \n1 - Greet \n2 - Even \n3 - Calculator \n0 - Exit");
+        System.out.println("Please enter the game number and press Enter. \n1 - Greet \n2 - Even "
+                + "\n3 - Calculator \n4 - GCD \n0 - Exit");
         var chose = scan.next();
         System.out.println("Your choice: " + chose);
         System.out.println("Welcome to the Brain Games!");
@@ -20,10 +22,11 @@ public class App {
             case "3":
                 Engine.game(Calculator.description(), Calculator.game());
                 break;
+            case "4":
+                Engine.game(Gcd.description(), Gcd.game());
+                break;
             default:
                 break;
         }
-
-
     }
 }
