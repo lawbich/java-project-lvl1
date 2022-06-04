@@ -16,12 +16,18 @@ public class Prime {
             var number = Utils.randomNumber();
             questAnsw[i][0] = number + "";
 
-            for (var j = 2; j <= Math.sqrt(number); j++) {
-                if (number % j == 0) {
-                    questAnsw[i][1] = "no";
-                    break;
-                } else {
-                    questAnsw[i][1] = "yes";
+            if (number = 2 || number = 3) {
+                questAnsw[i][1] = "yes";
+            } else if (number = 1) {
+                questAnsw[i][1] = "no";
+            } else {
+                for (var j = 2; j <= Math.sqrt(number); j++) {
+                    if (number % j == 0) {
+                        questAnsw[i][1] = "no";
+                        break;
+                    } else {
+                        questAnsw[i][1] = "yes";
+                    }
                 }
             }
         }
