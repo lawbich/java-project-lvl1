@@ -1,9 +1,7 @@
 package hexlet.code;
 
 import hexlet.code.games.Even;
-
 import hexlet.code.games.Calculator;
-
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
@@ -17,10 +15,10 @@ public class App {
                 Cli.greeting();
                 break;
             case "2":
-                Even.game();
+                Engine.game(Even.description(), Even.game());
                 break;
             case "3":
-                Calculator.game();
+                Engine.game(Calculator.description(), Calculator.game());
                 break;
             default:
                 break;

@@ -1,43 +1,24 @@
 package hexlet.code.games;
 
-import java.util.Scanner;
+import hexlet.code.Utils;
 
 public class Even {
-    public static void game() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("May I have your name?");
-        var name = sc.next();
-        System.out.println("Hello, " + name + "!");
-        System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
-        final var gameRounds = 3;
-        for (var i = 0; i <= gameRounds; i++) {
-            if (i == gameRounds) {
-                System.out.println("Congratulations, " + name + "!");
-                break;
-            }
-            final var min = 0;
-            final var max = 100;
-            var number = Math.round(Math.random() * (max - min) + min);
-            var rightAnswer = "";
+    public static String description() {
+        final String description = "Answer 'yes' if number even otherwise answer 'no'.";
+        return description;
+    }
+
+    public static String[][] game() {
+        final String[][] questAnsw = new String[3][2];
+        for (var i = 0; i < 3; i++) {
+            var number = Utils.randomNumber(0, 100);
             if (number % 2 == 0) {
-                rightAnswer = "yes";
+                questAnsw[i][1] = "yes";
             } else {
-                rightAnswer = "no";
+                questAnsw[i][1] = "no";
             }
-
-            var question = number + "";
-
-            Scanner scan = new Scanner(System.in);
-            System.out.println("Question: " + question);
-            var answer = scan.next();
-            if (!answer.equals(rightAnswer)) {
-                System.out.print("\'" + answer + "\'" + " is wrong answer ;(.");
-                System.out.print("Correct answer was " + "\'" + rightAnswer + "\'" + ".");
-                System.out.println("\nLet's try again, " + name + "!");
-                break;
-            } else {
-                System.out.println("Correct!");
-            }
+            questAnsw[i][0] = number + "";
         }
+        return questAnsw;
     }
 }
