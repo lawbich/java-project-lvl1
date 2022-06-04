@@ -3,7 +3,7 @@ package hexlet.code;
 public class Utils {
     public static int randomNumber() {
         final int rangeMax = 100;
-        final int rangeMin = 0;
+        final int rangeMin = 1;
         var number = (int) Math.round(Math.random() * (rangeMax - rangeMin) + rangeMin);
         return number;
     }
