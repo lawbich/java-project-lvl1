@@ -9,10 +9,12 @@ public class Gcd {
     }
 
     public static String[][] game() {
-        final String[][] questAnsw = new String[3][2];
-        for (var i = 0; i < 3; i++) {
-            var number1 = Utils.randomNumber(0, 100);
-            var number2 = Utils.randomNumber(0, 100);
+        final var rounds = 3;
+        final String[][] questAnsw = new String[rounds][2];
+        final var roundsNumber = 3;
+        for (var i = 0; i < roundsNumber; i++) {
+            var number1 = Utils.randomNumber();
+            var number2 = Utils.randomNumber();
 
             questAnsw[i][0] = number1 + " " + number2;
 

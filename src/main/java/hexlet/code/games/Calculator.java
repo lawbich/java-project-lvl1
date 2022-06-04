@@ -9,22 +9,23 @@ public class Calculator {
     }
 
     public static String[][] game() {
-        final String[][] questAnsw = new String[3][2];
-
-        for (var i = 0; i < 3; i++) {
-            var number1 = Utils.randomNumber(0, 100);
-            var number2 = Utils.randomNumber(0, 100);
-            var operand = Utils.randomNumber(1, 3);
+        final var rounds = 3;
+        final String[][] questAnsw = new String[rounds][2];
+        final var roundsNumber = 3;
+        for (var i = 0; i < roundsNumber; i++) {
+            var number1 = Utils.randomNumber();
+            var number2 = Utils.randomNumber();
+            var operand = Utils.randomOperandNumber() + "";
             switch (operand) {
-                case 1:
+                case "1":
                     questAnsw[i][0] = number1 + " * " + number2;
                     questAnsw[i][1] = number1 * number2 + "";
                     break;
-                case 2:
+                case "2":
                     questAnsw[i][0] = number1 + " + " + number2;
                     questAnsw[i][1] = number1 + number2 + "";
                     break;
-                case 3:
+                case "3":
                     questAnsw[i][0] = number1 + " - " + number2;
                     questAnsw[i][1] = number1 - number2 + "";
                     break;

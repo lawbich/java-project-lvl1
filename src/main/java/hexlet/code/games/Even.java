@@ -9,9 +9,11 @@ public class Even {
     }
 
     public static String[][] game() {
-        final String[][] questAnsw = new String[3][2];
-        for (var i = 0; i < 3; i++) {
-            var number = Utils.randomNumber(0, 100);
+        final var rounds = 3;
+        final String[][] questAnsw = new String[rounds][2];
+        final var roundsNumber = 3;
+        for (var i = 0; i < roundsNumber; i++) {
+            var number = Utils.randomNumber();
             if (number % 2 == 0) {
                 questAnsw[i][1] = "yes";
             } else {
