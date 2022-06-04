@@ -16,9 +16,9 @@ public class Prime {
             var number = Utils.randomNumber();
             questAnsw[i][0] = number + "";
 
-            if (number = 2 || number = 3) {
+            if (number == 2 || number == 3) {
                 questAnsw[i][1] = "yes";
-            } else if (number = 1) {
+            } else if (number == 1) {
                 questAnsw[i][1] = "no";
             } else {
                 for (var j = 2; j <= Math.sqrt(number); j++) {
