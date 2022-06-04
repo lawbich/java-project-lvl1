@@ -7,4 +7,4 @@
 
 [![Actions Status](https://github.com/lawbich/java-project-lvl1/workflows/build/badge.svg)](https://github.com/lawbich/java-project-lvl1/actions)
 
-<script id="asciicast-MDHuftRxllSFbyLlF8S4TVmkX" src="https://asciinema.org/a/MDHuftRxllSFbyLlF8S4TVmkX.js" async></script>
+[![asciicast](https://asciinema.org/a/MDHuftRxllSFbyLlF8S4TVmkX.svg)](https://asciinema.org/a/MDHuftRxllSFbyLlF8S4TVmkX)
