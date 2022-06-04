@@ -14,7 +14,6 @@ public class App {
                 + "\n3 - Calculator \n4 - GCD \n5 - Progression \n6 - Prime \n0 - Exit");
         var chose = scan.next();
         System.out.println("Your choice: " + chose);
-        System.out.println("Welcome to the Brain Games!");
         switch (chose) {
             case "1":
                 Cli.greeting();
@@ -30,8 +29,10 @@ public class App {
                 break;
             case "5":
                 Engine.game(Progression.description(), Progression.game());
+                break;
             case "6":
                 Engine.game(Prime.description(), Prime.game());
+                break;
             default:
                 break;
         }
