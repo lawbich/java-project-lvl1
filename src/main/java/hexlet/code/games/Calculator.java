@@ -26,7 +26,7 @@ public class Calculator {
                     break;
                 case 3:
                     questAnsw[i][0] = number1 + " - " + number2;
-                    questAnsw[i][1]= number1 - number2 + "";
+                    questAnsw[i][1] = number1 - number2 + "";
                     break;
                 default:
                     break;
