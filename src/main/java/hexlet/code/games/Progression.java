@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Progression {
 
-    public static final String description = "What number is missing in the progression?";
+    private static String description = "What number is missing in the progression?";
 
     public static void game() {
         final var rounds = 3;

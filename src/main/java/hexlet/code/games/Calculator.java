@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calculator {
-    public static final String description = "What is the result of the expression?";
+    private static String description = "What is the result of the expression?";
 
     public static void game() {
         final var rounds = 3;

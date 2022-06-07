@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Gcd {
 
-    public static final String description = "Find the greatest common divisor of given numbers.";
+    private static String description = "Find the greatest common divisor of given numbers.";
 
     public static void game() {
         final var rounds = 3;
