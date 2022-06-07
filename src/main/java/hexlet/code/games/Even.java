@@ -3,10 +3,8 @@ package hexlet.code.games;
 import hexlet.code.Utils;
 
 public class Even {
-    public static String description() {
-        final String description = "Answer 'yes' if number even otherwise answer 'no'.";
-        return description;
-    }
+
+    public static final String description = "Answer 'yes' if number even otherwise answer 'no'.";
 
     public static String[][] game() {
         final var rounds = 3;

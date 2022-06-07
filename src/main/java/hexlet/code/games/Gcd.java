@@ -3,10 +3,8 @@ package hexlet.code.games;
 import hexlet.code.Utils;
 
 public class Gcd {
-    public static String description() {
-        final String description = "Find the greatest common divisor of given numbers.";
-        return description;
-    }
+
+    public static final String description = "Find the greatest common divisor of given numbers.";
 
     public static String[][] game() {
         final var rounds = 3;

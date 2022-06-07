@@ -3,10 +3,8 @@ package hexlet.code.games;
 import hexlet.code.Utils;
 
 public class Prime {
-    public static String description() {
-        final String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        return description;
-    }
+
+    public static final String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static String[][] game() {
         final var rounds = 3;

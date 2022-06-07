@@ -3,10 +3,9 @@ package hexlet.code.games;
 import hexlet.code.Utils;
 
 public class Progression {
-    public static String description() {
-        final String description = "What number is missing in the progression?";
-        return description;
-    }
+
+    public static final String description = "What number is missing in the progression?";
+
     public static String[][] game() {
         final var rounds = 3;
         final String[][] questAnsw = new String[rounds][2];

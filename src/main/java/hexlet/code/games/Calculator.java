@@ -3,10 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Utils;
 
 public class Calculator {
-    public static String description() {
-        final String description = "What is the result of the expression?";
-        return description;
-    }
+    public static final String description = "What is the result of the expression?";
 
     public static String[][] game() {
         final var rounds = 3;

@@ -14,18 +14,17 @@ public class Engine {
         for (var i = 0; i <= gameRounds; i++) {
             if (i == gameRounds) {
                 System.out.println("Congratulations, " + name + "!");
-                break;
+                return;
             }
             var question = questAnsw[i][0];
             var rightAnswer = questAnsw[i][1];
-            Scanner scan = new Scanner(System.in);
             System.out.println("Question: " + question);
-            var answer = scan.next();
+            var answer = sc.next();
             if (!answer.equals(rightAnswer)) {
                 System.out.print("\'" + answer + "\'" + " is wrong answer ;(.");
                 System.out.print("Correct answer was " + "\'" + rightAnswer + "\'" + ".");
                 System.out.println("\nLet's try again, " + name + "!");
-                break;
+                return;
             } else {
                 System.out.println("Correct!");
             }
