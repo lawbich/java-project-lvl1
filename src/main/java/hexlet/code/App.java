@@ -25,19 +25,19 @@ public class App {
                 Cli.greeting();
                 break;
             case "2":
-                Engine.game(Even.description, Even.game());
+                Even.game();
                 break;
             case "3":
-                Engine.game(Calculator.description, Calculator.game());
+                Calculator.game();
                 break;
             case "4":
-                Engine.game(Gcd.description, Gcd.game());
+                Gcd.game();
                 break;
             case "5":
-                Engine.game(Progression.description, Progression.game());
+                Progression.game();
                 break;
             case "6":
-                Engine.game(Prime.description, Prime.game());
+                Prime.game();
                 break;
             default:
                 break;

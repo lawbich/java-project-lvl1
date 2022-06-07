@@ -1,12 +1,13 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
 
     public static final String description = "What number is missing in the progression?";
 
-    public static String[][] game() {
+    public static void game() {
         final var rounds = 3;
         final String[][] questAnsw = new String[rounds][2];
         final var roundsNumber = 3;
@@ -25,6 +26,6 @@ public class Progression {
 
             questAnsw[i][0] = String.join(" ", array);
         }
-        return questAnsw;
+        Engine.run(description, questAnsw);
     }
 }

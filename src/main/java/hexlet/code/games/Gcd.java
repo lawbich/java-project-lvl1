@@ -1,12 +1,13 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Gcd {
 
     public static final String description = "Find the greatest common divisor of given numbers.";
 
-    public static String[][] game() {
+    public static void game() {
         final var rounds = 3;
         final String[][] questAnsw = new String[rounds][2];
         final var roundsNumber = 3;
@@ -25,6 +26,6 @@ public class Gcd {
             }
             questAnsw[i][1] = number1 + number2 + "";
         }
-        return questAnsw;
+        Engine.run(description, questAnsw);
     }
 }

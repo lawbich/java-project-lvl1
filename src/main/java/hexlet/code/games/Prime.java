@@ -1,12 +1,13 @@
 package hexlet.code.games;
 
 import hexlet.code.Utils;
+import hexlet.code.Engine;
 
 public class Prime {
 
     public static final String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-    public static String[][] game() {
+    public static void game() {
         final var rounds = 3;
         final String[][] questAnsw = new String[rounds][2];
         final var roundsNumber = 3;
@@ -31,6 +32,6 @@ public class Prime {
                 }
             }
         }
-        return questAnsw;
+        Engine.run(description, questAnsw);
     }
 }

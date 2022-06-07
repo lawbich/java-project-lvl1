@@ -1,12 +1,13 @@
 package hexlet.code.games;
 
 import hexlet.code.Utils;
+import hexlet.code.Engine;
 
 public class Even {
 
     public static final String description = "Answer 'yes' if number even otherwise answer 'no'.";
 
-    public static String[][] game() {
+    public static void game() {
         final var rounds = 3;
         final String[][] questAnsw = new String[rounds][2];
         final var roundsNumber = 3;
@@ -19,6 +20,6 @@ public class Even {
             }
             questAnsw[i][0] = number + "";
         }
-        return questAnsw;
+        Engine.run(description, questAnsw);
     }
 }

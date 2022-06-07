@@ -1,11 +1,12 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calculator {
     public static final String description = "What is the result of the expression?";
 
-    public static String[][] game() {
+    public static void game() {
         final var rounds = 3;
         final String[][] questAnsw = new String[rounds][2];
         final var roundsNumber = 3;
@@ -30,7 +31,7 @@ public class Calculator {
                     break;
             }
         }
-        return questAnsw;
+        Engine.run(description, questAnsw);
     }
 }
 
