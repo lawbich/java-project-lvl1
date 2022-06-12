@@ -8,30 +8,33 @@ public class Prime {
     private static String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static void game() {
-        final var rounds = 3;
-        final String[][] questAnsw = new String[rounds][2];
-        final var roundsNumber = 3;
-        for (var i = 0; i < roundsNumber; i++) {
-            var number = Utils.randomNumber();
+        final String[][] questAnsw = new String[Engine.gameRounds][2];
+        for (var i = 0; i < Engine.gameRounds; i++) {
+            var number = Utils.randomNumber(100);
             questAnsw[i][0] = number + "";
+            questAnsw[i][1] = primeDetector(number);
+        }
+        Engine.run(description, questAnsw);
+    }
 
-            final var exception1 = 2;
-            final var exception2 = 3;
-            if (number == exception1 || number == exception2) {
-                questAnsw[i][1] = "yes";
-            } else if (number == 1) {
-                questAnsw[i][1] = "no";
-            } else {
-                for (var j = 2; j <= Math.sqrt(number); j++) {
-                    if (number % j == 0) {
-                        questAnsw[i][1] = "no";
-                        break;
-                    } else {
-                        questAnsw[i][1] = "yes";
-                    }
+    public static String primeDetector(int number) {
+        final var exception1 = 2;
+        final var exception2 = 3;
+        var result = "";
+        if (number == exception1 || number == exception2) {
+            result = "yes";
+        } else if (number == 1) {
+            result = "no";
+        } else {
+            for (var j = 2; j <= Math.sqrt(number); j++) {
+                if (number % j == 0) {
+                    result = "no";
+                    break;
+                } else {
+                    result = "yes";
                 }
             }
         }
-        Engine.run(description, questAnsw);
+        return result;
     }
 }
