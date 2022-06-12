@@ -8,9 +8,10 @@ public class Prime {
     private static String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static void game() {
-        final String[][] questAnsw = new String[Engine.gameRounds][2];
-        for (var i = 0; i < Engine.gameRounds; i++) {
-            var number = Utils.randomNumber(100);
+        final String[][] questAnsw = new String[Engine.ROUNDS][2];
+        for (var i = 0; i < Engine.ROUNDS; i++) {
+            final int rangeBoundary = 100;
+            var number = Utils.randomNumber(rangeBoundary);
             questAnsw[i][0] = number + "";
             questAnsw[i][1] = primeDetector(number);
         }

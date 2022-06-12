@@ -10,8 +10,9 @@ public class Even {
     public static void game() {
         final var rounds = 3;
         final String[][] questAnsw = new String[rounds][2];
-        for (var i = 0; i < Engine.gameRounds; i++) {
-            var number = Utils.randomNumber(100);
+        for (var i = 0; i < Engine.ROUNDS; i++) {
+            final int rangeBoundary = 100;
+            var number = Utils.randomNumber(rangeBoundary);
             if (number % 2 == 0) {
                 questAnsw[i][1] = "yes";
             } else {

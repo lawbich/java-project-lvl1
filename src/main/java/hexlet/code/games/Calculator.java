@@ -7,11 +7,16 @@ public class Calculator {
     private static String description = "What is the result of the expression?";
 
     public static void game() {
-        final String[][] questAnsw = new String[Engine.gameRounds][2];
-        for (var i = 0; i < Engine.gameRounds; i++) {
-            var number1 = Utils.randomNumber(100);
-            var number2 = Utils.randomNumber(100);
-            var operand = Utils.randomNumber(3) + "";
+        final String[][] questAnsw = new String[Engine.ROUNDS][2];
+        for (var i = 0; i < Engine.ROUNDS; i++) {
+
+            final int rangeBoundary = 100;
+            var number1 = Utils.randomNumber(rangeBoundary);
+            var number2 = Utils.randomNumber(rangeBoundary);
+
+            final int operandQuantity = 3;
+            var operand = Utils.randomNumber(operandQuantity) + "";
+
             switch (operand) {
                 case "1":
                     questAnsw[i][0] = number1 + " * " + number2;
