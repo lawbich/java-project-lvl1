@@ -10,8 +10,7 @@ public class Engine {
         Scanner sc = new Scanner(System.in);
         System.out.println("May I have your name?");
         var name = sc.next();
-        System.out.println("Hello, " + name + "!");
-        System.out.println(description);
+        System.out.println("Hello, " + name + "!" + "\n" + description);
         for (var i = 0; i <= ROUNDS; i++) {
             if (i == ROUNDS) {
                 System.out.println("Congratulations, " + name + "!");

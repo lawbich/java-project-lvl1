@@ -37,5 +37,3 @@ public class Calculator {
         Engine.run(description, questAnsw);
     }
 }
-
-

@@ -10,12 +10,18 @@ public class Progression {
     public static void game() {
         final String[][] questAnsw = new String[Engine.ROUNDS][2];
         for (var i = 0; i < Engine.ROUNDS; i++) {
+
             final int arrayLengthStart = 5;
             final int arrayLengthBoundary = 10;
-            var array = new String[Utils.randomNumber(arrayLengthStart, arrayLengthBoundary)];
+            var length = Utils.randomNumber(arrayLengthStart, arrayLengthBoundary);
+
             final int rangeBoundary = 100;
-            array[0] = Utils.randomNumber(rangeBoundary) + "";
-            array = progressionGenerator(array);
+            var startNumber = Utils.randomNumber(rangeBoundary);
+
+            final int iterationRangeBoundary = 50;
+            var iteration = Utils.randomNumber(iterationRangeBoundary);
+
+            var array = progressionGenerator(startNumber, length, iteration);
 
             var randomNumber = Utils.randomNumber(0, array.length - 1);
             questAnsw[i][1] = array[randomNumber];
@@ -26,9 +32,9 @@ public class Progression {
         Engine.run(description, questAnsw);
     }
 
-    public static String[] progressionGenerator(String[] array) {
-        final int rangeBoundary = 50;
-        int iteration = Utils.randomNumber(rangeBoundary);
+    public static String[] progressionGenerator(int startNumber, int length, int iteration) {
+        var array = new String[length];
+        array[0] = startNumber + "";
         for (var j = 0; j < array.length - 1; j++) {
             array[j + 1] = (Integer.parseInt(array[j]) + iteration) + "";
         }

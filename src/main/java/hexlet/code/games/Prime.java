@@ -13,12 +13,12 @@ public class Prime {
             final int rangeBoundary = 100;
             var number = Utils.randomNumber(rangeBoundary);
             questAnsw[i][0] = number + "";
-            questAnsw[i][1] = primeDetector(number);
+            questAnsw[i][1] = isPrime(number) ? "yes" : "no";
         }
         Engine.run(description, questAnsw);
     }
 
-    public static String primeDetector(int number) {
+    public static boolean isPrime(int number) {
         final var exception1 = 2;
         final var exception2 = 3;
         var result = "";
@@ -29,13 +29,10 @@ public class Prime {
         } else {
             for (var j = 2; j <= Math.sqrt(number); j++) {
                 if (number % j == 0) {
-                    result = "no";
-                    break;
-                } else {
-                    result = "yes";
+                    return false;
                 }
             }
         }
-        return result;
+        return true;
     }
 }
